@@ -1,10 +1,11 @@
 import React from 'react';
+import MainPage from './pages/MainPage.js'
 import './App.css';
 
 function App() {
   return (
     <div>
-      <h1>Projeto Loja Online</h1>
+      <MainPage />
     </div>
   );
 }

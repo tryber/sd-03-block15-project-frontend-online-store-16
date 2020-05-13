@@ -1,7 +1,14 @@
 import React from 'react';
+import SearchBar from '../components/SearchBar.js'
 
 class MainPage extends React.Component {
-  constructor(props) {
-    super(props);
+  render () {
+    return (
+      <div>
+        <SearchBar />
+      </div>
+    )
   }
 }
+
+export default MainPage;
