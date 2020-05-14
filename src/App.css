@@ -3,12 +3,19 @@ Preto rgb(30, 30, 30)
 azul rgb(10, 53, 106)
 verde rgb(41, 89, 54)
 vermelho rgb(177, 27, 42)
-rosa rgb(255, 148, 146) */
+rosa rgb(255, 148, 146) 
+Fontes
+font-family: 'Patrick Hand SC', cursive;
+font-family: 'Roboto', sans-serif;*/
 
 input {
   border: 2px solid rgb(177, 27, 42);
   border-radius: 15px;
+  color: rgb(30, 30, 30);
+  font-family: Roboto, sans-serif;
+  font-size: 15px;
   height: 25px;
+  padding: 0 50px;
   width: 95%;
 }
 
