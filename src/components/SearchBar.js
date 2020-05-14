@@ -5,11 +5,9 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons';
 class SearchBar extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      filter: '',
-    }
+    this.state = { filter: '' };
   }
-  
+
   setSearch(event) {
     this.setState({ filter: event.target.value });
   }
