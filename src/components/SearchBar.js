@@ -10,7 +10,7 @@ class SearchBar extends React.Component {
     }
   }
   
-  setSearch = (event) => {
+  setSearch(event) {
     this.setState({ filter: event.target.value });
   }
 
