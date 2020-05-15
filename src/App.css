@@ -1,22 +1,49 @@
+.header {
+  display: flex;
+  flex-flow: row wrap;
+  height: 90px;
+  width: 100%;
+  background-color: rgb(255, 148, 146);
+  align-items: center;
+  justify-content: space-around;
+}
+
+.title {
+  color: rgb(30, 30, 30);
+  font-family: Alegreya Sans SC, sans-serif;
+  font-size: 40px;
+  font-weight: 900;
+}
+
+.logo {
+  color: rgb(30, 30, 30);
+  font-size: 30px;
+  padding-bottom: 8px;
+  margin-right: 4px;
+  margin-left: 50px;
+}
+
 input {
   border: 2px solid rgb(177, 27, 42);
-  border-radius: 15px;
+  border-radius: 8px;
   color: rgb(30, 30, 30);
   font-family: Roboto , sans-serif;
   font-size: 15px;
-  height: 25px;
+  height: 30px;
   padding: 0 50px;
-  width: 95%;
+  width: 100%;
+  margin: 0 20px;
 }
 
 .input-wrapper {
   display: flex;
+  flex-grow: 1;
   flex-wrap: wrap;
 }
 
 .searchIcon {
   color: rgb(255, 148, 146);
-  margin-left: 10px;
-  margin-top: 7px;
+  margin-left: 30px;
+  margin-top: 9px;
   position: absolute;
 }
