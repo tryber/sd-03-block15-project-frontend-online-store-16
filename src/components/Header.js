@@ -2,7 +2,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCubes } from '@fortawesome/free-solid-svg-icons';
 import SearchBar from './SearchBar';
-import CartButton from '../components/CartButton.js'
+import CartButton from '../components/CartButton.js';
 
 
 class Header extends React.Component {
@@ -15,7 +15,7 @@ class Header extends React.Component {
         </div>
         <SearchBar />
         <CartButton />
-     </section>
+      </section>
     );
   }
 }

@@ -1,16 +1,16 @@
 .header {
+  align-items: center;
+  background-color: rgb(255, 148, 146);
   display: flex;
   flex-flow: row wrap;
   height: 90px;
-  width: 100%;
-  background-color: rgb(255, 148, 146);
-  align-items: center;
   justify-content: space-around;
+  width: 100%;
 }
 
 .title {
   color: rgb(30, 30, 30);
-  font-family: Alegreya Sans SC, sans-serif;
+  font-family: Alegreya Sans SC , sans-serif;
   font-size: 40px;
   font-weight: 900;
 }
@@ -18,21 +18,21 @@
 .logo {
   color: rgb(30, 30, 30);
   font-size: 30px;
-  padding-bottom: 8px;
-  margin-right: 4px;
   margin-left: 80px;
+  margin-right: 4px;
+  padding-bottom: 8px;
 }
 
 input {
-  border: 2px solid rgb(30, 30, 30);;
+  border: 2px solid rgb(30, 30, 30);
   border-radius: 8px;
   color: rgb(30, 30, 30);
   font-family: Roboto , sans-serif;
   font-size: 15px;
   height: 30px;
+  margin: 0 20px;
   padding: 0 50px;
   width: 100%;
-  margin: 0 20px;
 }
 
 .input-wrapper {
@@ -50,6 +50,6 @@ input {
 
 .cart-icon {
   color: rgb(30, 30, 30);
-  margin-right: 80px;
   font-size: 35px;
+  margin-right: 80px;
 }
