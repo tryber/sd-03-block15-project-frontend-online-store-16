@@ -16,7 +16,7 @@ class SearchBar extends React.Component {
   render() {
     return (
       <section className="input-wrapper">
-        <FontAwesomeIcon icon={faSearch} className="searchIcon" />
+        <FontAwesomeIcon icon={faSearch} className="search-icon" />
         <input type="text" onChange={this.setSearch} />
       </section>
     );

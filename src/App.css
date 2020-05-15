@@ -20,11 +20,11 @@
   font-size: 30px;
   padding-bottom: 8px;
   margin-right: 4px;
-  margin-left: 50px;
+  margin-left: 80px;
 }
 
 input {
-  border: 2px solid rgb(177, 27, 42);
+  border: 2px solid rgb(30, 30, 30);;
   border-radius: 8px;
   color: rgb(30, 30, 30);
   font-family: Roboto , sans-serif;
@@ -37,13 +37,19 @@ input {
 
 .input-wrapper {
   display: flex;
-  flex-grow: 1;
+  flex-grow: 0.7;
   flex-wrap: wrap;
 }
 
-.searchIcon {
+.search-icon {
   color: rgb(255, 148, 146);
   margin-left: 30px;
   margin-top: 9px;
   position: absolute;
+}
+
+.cart-icon {
+  color: rgb(30, 30, 30);
+  margin-right: 80px;
+  font-size: 35px;
 }

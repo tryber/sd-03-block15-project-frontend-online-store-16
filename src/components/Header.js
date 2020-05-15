@@ -2,6 +2,8 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCubes } from '@fortawesome/free-solid-svg-icons';
 import SearchBar from './SearchBar';
+import CartButton from '../components/CartButton.js'
+
 
 class Header extends React.Component {
   render() {
@@ -12,7 +14,7 @@ class Header extends React.Component {
           <span className="title">Clube dos 3</span>
         </div>
         <SearchBar />
-        <p>teste</p>
+        <CartButton />
      </section>
     );
   }
