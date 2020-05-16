@@ -1,0 +1,51 @@
+.empty-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.empty-message {
+  color: rgb(30, 30, 30);
+  font-family: Alegreya Sans SC , sans-serif;
+  font-size: 30px;
+  margin-bottom: 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.empty-cart-image {
+  align-content: center;
+  margin: auto;
+  width: 300px;
+}
+
+.sale-text {
+  font-family: Roboto , sans-serif;
+  font-size: 25px;
+  text-align: center;
+}
+
+.wheel-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.wheel1 {
+  animation: cart 3s linear infinite;
+  margin-left: 55%;
+  position: absolute;
+  width: 50px;
+}
+
+.wheel2 {
+  animation: cart 3s linear infinite;
+  margin-left: 45%;
+  position: absolute;
+  width: 50px;
+}
+
+@keyframes cart {
+
+  from { transform: rotateZ(0deg); }
+
+  to { transform: rotateZ(360deg); }
+}

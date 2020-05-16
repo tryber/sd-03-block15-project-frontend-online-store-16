@@ -1,6 +1,6 @@
 import React from 'react';
-import Header from '../components/Header/Header.js';
-import CategoryList from '../components/CategoryList/CategoryList';
+import Header from '../../components/Header/Header.js';
+import CategoryList from '../../components/CategoryList/CategoryList';
 
 class Home extends React.Component {
   constructor(props) {
