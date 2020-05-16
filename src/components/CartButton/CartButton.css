@@ -3,3 +3,7 @@
   font-size: 35px;
   margin-right: 80px;
 }
+
+.cart-icon:hover {
+  color: rgb(46, 196, 182);
+}

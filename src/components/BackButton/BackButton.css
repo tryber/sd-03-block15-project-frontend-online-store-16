@@ -1,0 +1,8 @@
+.back-icon {
+  color: rgb(30, 30, 30);
+  margin-right: 50px;
+}
+
+.back-icon:hover {
+  color: rgb(46, 196, 182);
+}
