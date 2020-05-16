@@ -4,11 +4,11 @@
 }
 
 .empty-message {
-  text-align: center;
   color: rgb(30, 30, 30);
   font-family: Alegreya Sans SC, sans-serif;
   font-size: 30px;
   margin-bottom: 0;
+  text-align: center;
   text-transform: uppercase;
 }
 
@@ -31,25 +31,21 @@
 
 .wheel1 {
   animation: cart 3s linear infinite;
-  position: absolute;
   margin-left: 55%;
+  position: absolute;
   width: 50px;
 }
 
 .wheel2 {
   animation: cart 3s linear infinite;
-  position: absolute;
   margin-left: 45%;
+  position: absolute;
   width: 50px;
 }
 
-@keyframes cart{
-  
-  from {
-    transform: rotateZ(0deg);
-  }
-  to {
-    transform: rotateZ(360deg);
-   }
-  }
+@keyframes cart {
 
+  from { transform: rotateZ(0deg); }
+
+  to { transform: rotateZ(360deg); }
+}
