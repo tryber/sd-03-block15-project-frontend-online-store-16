@@ -1,9 +1,9 @@
 import React from 'react';
 import Header from '../../components/Header/Header.js';
 import CategoryList from '../../components/CategoryList/CategoryList';
-import SearchBar from '../../components/SearchBar/SearchBar'
-import ProductsList from '../../components/ProductsList/ProductsList'
-import * as api from '../../services/api'
+import SearchBar from '../../components/SearchBar/SearchBar';
+import ProductsList from '../../components/ProductsList/ProductsList';
+import * as api from '../../services/api';
 
 class Home extends React.Component {
   constructor(props) {
@@ -15,9 +15,9 @@ class Home extends React.Component {
       test: true,
       categories: [],
     };
-    this.componentDidMount = this.componentDidMount.bind(this)
-    this.componentDidUpdate = this.componentDidUpdate.bind(this)
-    this.takeData = this.takeData.bind(this)
+    this.componentDidMount = this.componentDidMount.bind(this);
+    this.componentDidUpdate = this.componentDidUpdate.bind(this);
+    this.takeData = this.takeData.bind(this);
   }
 
   componentDidMount() {
@@ -31,15 +31,15 @@ class Home extends React.Component {
     const { test, selected, filter } = this.state
     if (test) {
       api.getProductsFromCategoryAndQuery(selected, filter)
-        .then(el => this.setState({
+        .then((el) => this.setState({
           product: el,
-          test: false
+          test: false,
         }));
     }
   }
 
   takeData(filter) {
-    this.setState({ test: true, filter })
+    this.setState({ test: true, filter });
   }
 
   render() {
@@ -47,7 +47,7 @@ class Home extends React.Component {
     return (
       <div>
         <Header />
-        <SearchBar onClick={this.takeData}/>
+        <SearchBar onClick={this.takeData} />
         <CategoryList />
         <div>
           {product.length === 0 ? (
@@ -55,7 +55,7 @@ class Home extends React.Component {
               Digite algum termo de pesquisa ou escolha uma categoria.
             </p>
           ) : (
-            <ProductsList products={product}/>
+            <ProductsList products={ product } />
           )}
         </div>
       </div>

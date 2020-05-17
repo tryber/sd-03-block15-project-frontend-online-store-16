@@ -8,7 +8,7 @@ class SearchBar extends React.Component {
     super(props);
     this.state = { filter: '' };
     this.setSearch = this.setSearch.bind(this);
-    this.handleSearchSubmit = this.handleSearchSubmit.bind(this)
+    this.handleSearchSubmit = this.handleSearchSubmit.bind(this);
   }
 
   setSearch(event) {
