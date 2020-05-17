@@ -46,13 +46,7 @@ class Home extends React.Component {
   }
 
   render() {
-    const {
-      category,
-      categories,
-      results,
-      searchInput,
-      loading,
-    } = this.state;
+    const { category, categories, results, searchInput, loading, } = this.state;
     return (
       <div>
         <div>
@@ -65,19 +59,17 @@ class Home extends React.Component {
           />
         </div>
         <div>
-          <CategoryList
-            categories={categories}
-            handleCheck={this.handleCheck}
-          />
+          <CategoryList categories={categories} 
+            handleCheck={this.handleCheck} />
           <div>
-          {categories.length === 0 ? (
-            <p data-testid="home-initial-message">
-              Digite algum termo de pesquisa ou escolha uma categoria.
-            </p>
+            {categories.length === 0 ? (
+              <p data-testid="home-initial-message">
+                Digite algum termo de pesquisa ou escolha uma categoria.
+              </p>
           ) : (
             <ProductsList products={results} />
           )}
-        </div>
+          </div>
         </div>
       </div>
     );

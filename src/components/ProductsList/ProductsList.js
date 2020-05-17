@@ -5,7 +5,7 @@ class ProductsList extends React.Component {
   render() {
     const { products, notFound } = this.props;
     console.log(products);
-    
+
     return (
       <div>
         {notFound && <p>Nenhum produto foi encontrado</p>}

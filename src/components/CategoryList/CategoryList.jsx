@@ -19,14 +19,14 @@ class CategoryList extends React.Component {
       <div>
         <h2>Category List</h2>
         <div>
-          {categories.map((category) => (
-            <label key={category.id}>
+          {categories.map(({id, name}) => (
+            <label key={id}>
               <input
-              data-testid="category"
-              type="checkBox"
-              onChange={() => handleCheck(category.id)}
+                data-testid="category"
+                type="checkBox"
+                onChange={() => handleCheck(id)}
               />
-              {category.name}
+              {name}
             </label>
           ))}
         </div>

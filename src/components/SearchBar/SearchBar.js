@@ -1,8 +1,8 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
-import { faCubes } from '@fortawesome/free-solid-svg-icons';
 import CartButton from '../CartButton/CartButton.js';
+import Logo from './Logo.js';
 import './SearchBar.css';
 
 class SearchBar extends React.Component {
@@ -13,13 +13,10 @@ class SearchBar extends React.Component {
       category,
       handleChanges,
       update,
-    } = this.props
+    } = this.props;
     return (
       <section className="header">
-        <div>
-          <FontAwesomeIcon icon={faCubes} className="logo" />
-          <span className="title">Clube dos 3</span>
-        </div>
+        <Logo />
         <section className="input-wrapper">
           <FontAwesomeIcon icon={faSearch} className="search-icon" />
           <input
