@@ -28,7 +28,7 @@ class Home extends React.Component {
   }
 
   componentDidUpdate() {
-    const { test, selected, filter } = this.state
+    const { test, selected, filter } = this.state;
     if (test) {
       api.getProductsFromCategoryAndQuery(selected, filter)
         .then((el) => this.setState({
@@ -43,7 +43,7 @@ class Home extends React.Component {
   }
 
   render() {
-    const { product } = this.state
+    const { product } = this.state;
     return (
       <div>
         <Header />
@@ -55,7 +55,7 @@ class Home extends React.Component {
               Digite algum termo de pesquisa ou escolha uma categoria.
             </p>
           ) : (
-            <ProductsList products={ product } />
+            <ProductsList products={product} />
           )}
         </div>
       </div>
