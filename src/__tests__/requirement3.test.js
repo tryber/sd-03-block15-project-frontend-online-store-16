@@ -15,4 +15,3 @@ describe('Requisito 3', () => {
     expect(screen.getByTestId('shopping-cart-empty-message')).toHaveTextContent('Seu carrinho está vazio')
   });
 });
-
