@@ -22,3 +22,27 @@ input {
   margin-top: 9px;
   position: absolute;
 }
+.header {
+  align-items: center;
+  background-color: rgb(255, 210, 85);
+  display: flex;
+  flex-flow: row wrap;
+  height: 90px;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.title {
+  color: rgb(30, 30, 30);
+  font-family: Alegreya Sans SC , sans-serif;
+  font-size: 40px;
+  font-weight: 900;
+}
+
+.logo {
+  color: rgb(30, 30, 30);
+  font-size: 30px;
+  margin-left: 80px;
+  margin-right: 4px;
+  padding-bottom: 8px;
+}
