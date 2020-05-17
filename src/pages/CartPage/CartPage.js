@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from '../../components/Header/Header.js';
+import SearchBar from '../../components/SearchBar/SearchBar.js';
 import BackButton from '../../components/BackButton/BackButton.js';
 import EmptyCart from '../../images/emptyCart.png';
 import Wheel from '../../images/wheel.png';
@@ -8,8 +8,8 @@ import './CartPage.css';
 class CartPage extends React.Component {
   render() {
     return (
-      <main>
-        <Header />
+      <div>
+        <SearchBar />
         <section className="empty-container">
           <h2 data-testid="shopping-cart-empty-message" className="empty-message">
             <span><BackButton /></span>
@@ -22,7 +22,7 @@ class CartPage extends React.Component {
             <img src={Wheel} alt="Wheel rolling animation" className="wheel2" />
           </div>
         </section>
-      </main>
+      </div>
     );
   }
 }
