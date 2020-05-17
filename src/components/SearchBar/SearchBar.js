@@ -9,7 +9,7 @@ class SearchBar extends React.Component {
 
   render() {
     const {
-      inputSearch,
+      searchInput,
       category,
       handleChanges,
       update,
@@ -22,13 +22,13 @@ class SearchBar extends React.Component {
           <input
             data-testid="query-input"
             type="text"
-            value={inputSearch}
+            value={searchInput}
             onChange={(event) => handleChanges(event)}
           />
           <button
             data-testid="query-button"
             type="button"
-            onClick={() => update(inputSearch, category)}
+            onClick={() => update(category, searchInput)}
           >
             Buscar
           </button>

@@ -19,8 +19,8 @@ class CategoryList extends React.Component {
       <div>
         <h2>Category List</h2>
         <div>
-          {categories.map(({id, name}) => (
-            <label key={id}>
+          {categories.map(({ id, name }) => (
+            <label htmlFor="category selection" key={id}>
               <input
                 data-testid="category"
                 type="checkBox"
