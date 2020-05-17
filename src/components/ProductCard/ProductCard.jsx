@@ -13,7 +13,8 @@ class ProductCard extends React.Component {
           {`Preço: R$ ${price.toFixed(2)}`}
         </h5>
       </div>
-    ) }
+    );
+  }
 }
 
 export default ProductCard;
