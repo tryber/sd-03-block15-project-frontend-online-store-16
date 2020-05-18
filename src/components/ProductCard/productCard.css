@@ -5,8 +5,7 @@ h4 {
 }
 
 .product {
-  grid-column-end: end;
-  grid-column-start: 2;
+  grid-column: 2 / end;
   grid-row-end: 3;
 }
 

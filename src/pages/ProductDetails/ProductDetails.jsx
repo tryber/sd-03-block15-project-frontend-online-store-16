@@ -1,6 +1,6 @@
 import React from 'react';
 import SearchBar from '../../components/SearchBar/SearchBar';
-import AddRemoveProductButton from '../../components/AddRemoveButton/AddRemoveButton'
+import AddRemoveProductButton from '../../components/AddRemoveButton/AddRemoveButton';
 import './productDetails.css';
 
 class ProductDetails extends React.Component {
