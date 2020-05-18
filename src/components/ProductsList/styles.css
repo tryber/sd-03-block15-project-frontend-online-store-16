@@ -1,6 +1,6 @@
 .content-area {
-  margin: auto;
-}
+  margin: 0;
+}  
 
 .container {
   display: grid;
