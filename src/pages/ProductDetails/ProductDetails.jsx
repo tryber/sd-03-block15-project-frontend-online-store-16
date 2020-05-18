@@ -1,7 +1,7 @@
 import React from 'react';
-import CartButton from '../../components/CartButton/CartButton.js';
+import SearchBar from '../../components/SearchBar/SearchBar.js';
 import AddRemoveProductButton from '../../components/AddRemoveButton/AddRemoveButton.jsx'
-
+import './productDetails.css'
 class ProductDetails extends React.Component {
   render() {
     const { location: { state } } = this.props;
@@ -10,24 +10,25 @@ class ProductDetails extends React.Component {
 
     return (
       <div>
-        <CartButton />
-        <div>
+        <SearchBar />
+        <h1 className="productTitle">Detalhes do Produto</h1>
+        <div className="productDetails">
           <h3 data-testid="product-detail-name">
             {state.title}
             <br />
             {`R$ ${state.price}`}
           </h3>
         </div>
-        <div>
+        <div className="productDetails">
           <img src={state.thumbnail} alt={state.title} />
         </div>
-        <div>
-          <h5>Especificações técnicas:</h5>
+        <div className="productDetails">
+          <h5 className="productDetails">Especificações técnicas:</h5>
           <p>
             {state.condition}
           </p>
         </div>
-        <AddRemoveProductButton />
+        <AddRemoveProductButton className="productDetails" />
       </div>
     );
   }

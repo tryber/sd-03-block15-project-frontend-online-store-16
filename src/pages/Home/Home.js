@@ -60,14 +60,15 @@ class Home extends React.Component {
           />
         </div>
         <div className="content-container">
-          <CategoryList categories={categories} handleCheck={this.handleCheck} />
+          <CategoryList categories={categories} handleCheck={this.handleCheck} className="left"
+          />
           <div>
             {categories.length === 0 ? (
               <p data-testid="home-initial-message">
                 Digite algum termo de pesquisa ou escolha uma categoria.
               </p>
           ) : (
-            <ProductsList products={results} />
+            <ProductsList products={results} className="right" />
           )}
           </div>
         </div>

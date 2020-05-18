@@ -1,0 +1,41 @@
+h4 {
+  font-size: 15px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.product {
+  grid-column-start: 2;
+  grid-column-end: end;
+  grid-row-end: 3;
+}
+
+.product-id {
+  text-align: center;
+}
+
+.product-image {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.product-price {
+  text-align: center;
+}
+
+.product-details {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+}
+
+a {
+  color: rgb(231, 29, 54);
+  text-decoration: none;
+}
+
+a:hover {
+  color:rgb(46, 196, 182);
+  text-decoration: none;
+}

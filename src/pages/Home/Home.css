@@ -1,4 +1,9 @@
 .content-container {
   margin: auto;
-  width: 95%;
+  width: 100%;
+  display: flex;
+}
+
+.left {
+  width: 5000px;
 }
