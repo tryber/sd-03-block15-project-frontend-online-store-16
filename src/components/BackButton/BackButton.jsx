@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBackward } from '@fortawesome/free-solid-svg-icons';
-import './BackButton.css';
+import './backButton.css';
 
 class BackButton extends React.Component {
   render() {

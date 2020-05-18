@@ -1,9 +1,10 @@
 import React from 'react';
 import { getCategories } from '../../services/api';
-import CategoryList from '../../components/CategoryList/CategoryList.jsx';
-import SearchBar from '../../components/SearchBar/SearchBar.js';
-import Request from '../../components/Request/Request.js';
-import ProductsList from '../../components/ProductsList/ProductsList.js';
+import CategoryList from '../../components/CategoryList/CategoryList';
+import SearchBar from '../../components/SearchBar/SearchBar';
+import Request from '../../components/Request/Request';
+import ProductsList from '../../components/ProductsList/ProductsList';
+import './Home.css';
 
 class Home extends React.Component {
 
@@ -58,15 +59,19 @@ class Home extends React.Component {
             loading={loading}
           />
         </div>
-        <div>
-          <CategoryList categories={categories} handleCheck={this.handleCheck} />
+        <div className="content-container">
+          <CategoryList
+            categories={categories}
+            handleCheck={this.handleCheck}
+            className="left"
+          />
           <div>
             {categories.length === 0 ? (
               <p data-testid="home-initial-message">
                 Digite algum termo de pesquisa ou escolha uma categoria.
               </p>
           ) : (
-            <ProductsList products={results} />
+            <ProductsList products={results} className="right" />
           )}
           </div>
         </div>

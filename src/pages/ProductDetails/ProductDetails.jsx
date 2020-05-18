@@ -1,4 +1,7 @@
 import React from 'react';
+import SearchBar from '../../components/SearchBar/SearchBar';
+import AddRemoveProductButton from '../../components/AddRemoveButton/AddRemoveButton';
+import './productDetails.css';
 
 class ProductDetails extends React.Component {
   render() {
@@ -8,22 +11,25 @@ class ProductDetails extends React.Component {
 
     return (
       <div>
-        <div>
+        <SearchBar />
+        <h1 className="productTitle">Detalhes do Produto</h1>
+        <div className="productDetails">
           <h3 data-testid="product-detail-name">
             {state.title}
             <br />
             {`R$ ${state.price}`}
           </h3>
         </div>
-        <div>
+        <div className="productDetails">
           <img src={state.thumbnail} alt={state.title} />
         </div>
-        <div>
-          <h5>Especificações técnicas:</h5>
+        <div className="productDetails">
+          <h5 className="productDetails">Especificações técnicas:</h5>
           <p>
             {state.condition}
           </p>
         </div>
+        <AddRemoveProductButton className="productDetails" />
       </div>
     );
   }
