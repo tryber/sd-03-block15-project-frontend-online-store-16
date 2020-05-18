@@ -1,8 +1,8 @@
 import React from 'react';
-import SearchBar from '../../components/SearchBar/SearchBar.js';
-import BackButton from '../../components/BackButton/BackButton.js';
+import SearchBar from '../../components/SearchBar/SearchBar';
+import BackButton from '../../components/BackButton/BackButton';
 import EmptyCart from '../../components/EmptyCart/EmptyCart';
-import './CartPage.css';
+import './cartPage.css';
 
 class CartPage extends React.Component {
   render() {
@@ -17,7 +17,6 @@ class CartPage extends React.Component {
         ? <EmptyCart />
         : <p>Teste</p>
         }
-        
       </div>
     );
   }

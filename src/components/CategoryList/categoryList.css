@@ -5,16 +5,16 @@
 
 .list-title {
   color: rgb(30, 30, 30);
-  font-family: Alegreya Sans SC, sans-serif;
+  font-family: Alegreya Sans SC , sans-serif;
   font-size: 30px;
   margin: 10px 0;
 }
 
 .categories-list {
-  border-right: 1px solid rgb(1, 22, 39);;
+  border-right: 1px solid rgb(1, 22, 39);
   display: flex;
   flex-direction: column;
-  font-family: Roboto, sans-serif;
+  font-family: Roboto , sans-serif;
   font-size: 16px;
   margin: 0;
   max-width: 300px;
@@ -22,7 +22,7 @@
 
 .check-box {
   margin-top: 5px;
-  width: 15px; 
+  width: 15px;
 }
 
 .label {

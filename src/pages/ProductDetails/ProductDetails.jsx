@@ -1,7 +1,8 @@
 import React from 'react';
-import SearchBar from '../../components/SearchBar/SearchBar.js';
-import AddRemoveProductButton from '../../components/AddRemoveButton/AddRemoveButton.jsx'
-import './productDetails.css'
+import SearchBar from '../../components/SearchBar/SearchBar';
+import AddRemoveProductButton from '../../components/AddRemoveButton/AddRemoveButton'
+import './productDetails.css';
+
 class ProductDetails extends React.Component {
   render() {
     const { location: { state } } = this.props;

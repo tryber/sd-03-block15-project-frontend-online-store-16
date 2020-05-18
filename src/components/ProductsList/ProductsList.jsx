@@ -1,6 +1,6 @@
 import React from 'react';
 import ProductCard from '../ProductCard/ProductCard';
-import './styles.css'
+import './productList.css'
 
 class ProductsList extends React.Component {
   render() {
@@ -13,7 +13,7 @@ class ProductsList extends React.Component {
         {products &&
           products.map((data) => (
             <div key={data.id} className="container">
-              <ProductCard key={data.id} product={data}  />
+              <ProductCard key={data.id} product={data} />
             </div>
           ))}
       </div>

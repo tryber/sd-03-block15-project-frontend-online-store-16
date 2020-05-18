@@ -1,9 +1,9 @@
 .productDetails {
   text-align: center;
 }
-​
+
 .productTitle {
-  text-align: center;
+  font-family: Alegreya Sans SC , sans-serif;
   font-size: 50px;
-  font-family: Alegreya Sans SC, sans-serif;
+  text-align: center;
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+
 class AddRemoveButton extends React.Component {
   constructor(props) {
     super(props);
@@ -16,7 +17,7 @@ class AddRemoveButton extends React.Component {
     if (amount >= 1) {
       this.setState((state) => ({ amount: state.amount - 1 }));
     } else {
-      this.setState({ amount: 0 })
+      this.setState({ amount: 0 });
     }
   }
 

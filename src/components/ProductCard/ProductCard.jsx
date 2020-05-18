@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './styles.css';
+import './productCard.css';
 
 class ProductCard extends React.Component {
   render() {
@@ -14,7 +14,7 @@ class ProductCard extends React.Component {
         <h5 className="product-price">
           {`Preço: R$ ${price.toFixed(2)}`}
         </h5>
-        <Link 
+        <Link
           className="product-details"
           data-testid="product-detail-link"
           to={{

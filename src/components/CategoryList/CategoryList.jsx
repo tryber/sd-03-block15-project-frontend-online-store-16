@@ -1,6 +1,6 @@
 import React from 'react';
 import * as api from '../../services/api';
-import './CategoryList.css'
+import './categoryList.css';
 
 class CategoryList extends React.Component {
   constructor(props) {
