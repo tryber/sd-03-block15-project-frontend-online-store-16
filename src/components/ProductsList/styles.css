@@ -1,0 +1,8 @@
+.content-area {
+  margin: 0;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3,33%);
+} 
