@@ -17,11 +17,11 @@ class CategoryList extends React.Component {
     const { categories } = this.state;
     const { handleCheck } = this.props;
     return (
-      <div>
+      <div className="category-container">
         <h2 className="list-title">Category List</h2>
         <div className="categories-list">
           {categories.map(({ id, name }) => (
-            <label htmlFor="category selection" key={id}>
+            <label htmlFor="category selection" key={id} className="label">
               <input
                 data-testid="category"
                 type="checkBox"

@@ -1,15 +1,13 @@
 import React from 'react';
-import { render } from '@testing-library/react';
-
 class AddRemoveButton extends React.Component {
   constructor(props) {
     super(props);
     this.state = { amount: 1 };
-    this.addToCardButton = this.addToCardButton.bind(this);
+    this.addToCartButton = this.addToCartButton.bind(this);
     this.removeFromCartButton = this.removeFromCartButton.bind(this);
   }
 
-  addToCardButton() {
+  addToCartButton() {
     this.setState((state) => ({ amount: state.amount + 1 }));
   }
 
@@ -25,7 +23,7 @@ class AddRemoveButton extends React.Component {
   render() {
     return (
       <div data-testid="product-detail-add-to-cart">
-        <button onClick={this.addToCardButton}>+</button>
+        <button onClick={this.addToCartButton}>+</button>
         <span>{this.state.amount}</span>
         <button onClick={this.removeFromCartButton}>-</button>
       </div>

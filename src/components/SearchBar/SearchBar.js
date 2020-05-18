@@ -25,14 +25,15 @@ class SearchBar extends React.Component {
             value={searchInput}
             onChange={(event) => handleChanges(event)}
           />
-          <button
+        </section>
+        <button
             data-testid="query-button"
             type="button"
             onClick={() => update(category, searchInput)}
+            className="search-button"
           >
-            Buscar
+            >
           </button>
-        </section>
         <CartButton />
       </section>
     );
