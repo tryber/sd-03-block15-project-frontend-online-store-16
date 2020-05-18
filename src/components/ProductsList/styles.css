@@ -4,11 +4,5 @@
 
 .container {
   display: grid;
-  grid-template-columns: repeat(3 , 1fr);
+  grid-template-columns: repeat(3, 1fr);
 }
-
-/* @media (max-width: 600px) {
-  .product-square  {
-   flex-direction: column;
-  }
-} */
