@@ -2,11 +2,10 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import CartButton from '../CartButton/CartButton';
-import Logo from './Logo.js';
+import Logo from './Logo';
 import './Style.css';
 
 class SearchBar extends React.Component {
-
   render() {
     const {
       searchInput,
@@ -27,13 +26,13 @@ class SearchBar extends React.Component {
           />
         </section>
         <button
-            data-testid="query-button"
-            type="button"
-            onClick={() => update(category, searchInput)}
-            className="search-button"
-          >
-            >
-          </button>
+          data-testid="query-button"
+          type="button"
+          onClick={() => update(category, searchInput)}
+          className="search-button"
+        >
+          A
+        </button>
         <CartButton />
       </section>
     );
