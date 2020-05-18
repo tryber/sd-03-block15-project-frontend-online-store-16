@@ -1,9 +1,9 @@
 import React from 'react';
 import { getCategories } from '../../services/api';
-import CategoryList from '../../components/CategoryList/CategoryList.jsx';
-import SearchBar from '../../components/SearchBar/SearchBar.js';
-import Request from '../../components/Request/Request.js';
-import ProductsList from '../../components/ProductsList/ProductsList.js';
+import CategoryList from '../../components/CategoryList/CategoryList';
+import SearchBar from '../../components/SearchBar/SearchBar';
+import Request from '../../components/Request/Request';
+import ProductsList from '../../components/ProductsList/ProductsList';
 import './Home.css';
 
 class Home extends React.Component {

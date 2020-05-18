@@ -1,9 +1,9 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
-import CartButton from '../CartButton/CartButton.js';
+import CartButton from '../CartButton/CartButton';
 import Logo from './Logo.js';
-import './SearchBar.css';
+import './Style.css';
 
 class SearchBar extends React.Component {
 

@@ -1,6 +1,6 @@
 import React from 'react';
-import CartButton from '../../components/CartButton/CartButton.js';
-import AddRemoveProductButton from '../../components/AddRemoveButton/AddRemoveButton.jsx'
+import CartButton from '../../components/CartButton/CartButton';
+import AddRemoveProductButton from '../../components/AddRemoveButton/AddRemoveButton';
 
 class ProductDetails extends React.Component {
   render() {
