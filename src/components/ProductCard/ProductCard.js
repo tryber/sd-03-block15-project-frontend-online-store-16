@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class ProductCard extends React.Component {
   render() {
@@ -12,6 +13,15 @@ class ProductCard extends React.Component {
         <h5>
           {`Preço: R$ ${price.toFixed(2)}`}
         </h5>
+        <Link
+          data-testid="product-detail-link"
+          to={{
+            pathname: `/product/${product.id}`,
+            state: product,
+          }}
+        >
+          Mais detalhes
+        </Link>
       </div>
     );
   }
