@@ -1,4 +1,6 @@
 import React from 'react';
+import CartButton from '../../components/CartButton/CartButton.js';
+import AddRemoveProductButton from '../../components/AddRemoveButton/AddRemoveButton.jsx'
 
 class ProductDetails extends React.Component {
   render() {
@@ -8,6 +10,7 @@ class ProductDetails extends React.Component {
 
     return (
       <div>
+        <CartButton />
         <div>
           <h3 data-testid="product-detail-name">
             {state.title}
@@ -24,6 +27,7 @@ class ProductDetails extends React.Component {
             {state.condition}
           </p>
         </div>
+        <AddRemoveProductButton />
       </div>
     );
   }

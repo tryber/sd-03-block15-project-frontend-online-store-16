@@ -4,6 +4,7 @@ import CategoryList from '../../components/CategoryList/CategoryList.jsx';
 import SearchBar from '../../components/SearchBar/SearchBar.js';
 import Request from '../../components/Request/Request.js';
 import ProductsList from '../../components/ProductsList/ProductsList.js';
+import './Home.css';
 
 class Home extends React.Component {
 
@@ -58,7 +59,7 @@ class Home extends React.Component {
             loading={loading}
           />
         </div>
-        <div>
+        <div className="content-container">
           <CategoryList categories={categories} handleCheck={this.handleCheck} />
           <div>
             {categories.length === 0 ? (

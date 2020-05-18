@@ -1,0 +1,15 @@
+.content-area {
+  margin: auto;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+/* @media (max-width: 600px) {
+  .product-square  {
+   flex-direction: column;
+  }
+} */
