@@ -2,12 +2,28 @@ import React from 'react';
 
 class ProductDetails extends React.Component {
   render() {
-    const { location: { state: { product: { title, thumbnail, price } } } } = this.props;
+    const { location: { state } } = this.props;
+
+    if (!state) return <p>Loading...</p>;
+
     return (
       <div>
-        <h2 data-testid="product-detail-name">{title}</h2>
-        <img src={thumbnail} alt={title} />
-        <p>{price}</p>
+        <div>
+          <h3 data-testid="product-detail-name">
+            {state.title}
+            <br />
+            {`R$ ${state.price}`}
+          </h3>
+        </div>
+        <div>
+          <img src={state.thumbnail} alt={state.title} />
+        </div>
+        <div>
+          <h5>Especificações técnicas:</h5>
+          <p>
+            {state.condition}
+          </p>
+        </div>
       </div>
     );
   }
