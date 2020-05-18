@@ -1,5 +1,6 @@
 import React from 'react';
 import * as api from '../../services/api';
+import './CategoryList.css'
 
 class CategoryList extends React.Component {
   constructor(props) {
@@ -17,14 +18,15 @@ class CategoryList extends React.Component {
     const { handleCheck } = this.props;
     return (
       <div>
-        <h2>Category List</h2>
-        <div>
+        <h2 className="list-title">Category List</h2>
+        <div className="categories-list">
           {categories.map(({ id, name }) => (
             <label htmlFor="category selection" key={id}>
               <input
                 data-testid="category"
                 type="checkBox"
                 onChange={() => handleCheck(id)}
+                className="check-box"
               />
               {name}
             </label>

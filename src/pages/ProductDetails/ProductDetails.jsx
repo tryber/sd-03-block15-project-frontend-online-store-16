@@ -1,4 +1,5 @@
 import React from 'react';
+import AddRemoveProductButton from '../../components/AddRemoveButton/AddRemoveButton.jsx'
 
 class ProductDetails extends React.Component {
   render() {
@@ -24,6 +25,7 @@ class ProductDetails extends React.Component {
             {state.condition}
           </p>
         </div>
+        <AddRemoveProductButton />
       </div>
     );
   }
