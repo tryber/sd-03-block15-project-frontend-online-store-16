@@ -1,30 +1,28 @@
- 
 import React from 'react';
 import { FaStar } from 'react-icons/fa';
-import './ProductRating.css'
+import './ProductRating.css';
 
 class ProductRating extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       rating: null,
-      comment: ''
+      comment: '',
     };
-    this.changeComent = this.changeComent.bind(this)
-    this.starRating = this.starRating.bind(this)
-    this.submitButton = this.submitButton.bind(this)
+    this.changeComent = this.changeComent.bind(this);
+    this.starRating = this.starRating.bind(this);
+    this.submitButton = this.submitButton.bind(this);
   }
-  
   changeComent(event) {
-    this.setState({ comment: event.target.value })
+    this.setState({ comment: event.target.value });
   }
   
   starRating(rating) {
-    this.setState({ rating })
+    this.setState({ rating });
   }
 
   submitButton() {
-    this.setState({ comment: '', rating: 0 })
+    this.setState({ comment: '', rating: 0 });
   }
 
   render() {
@@ -39,10 +37,10 @@ class ProductRating extends React.Component {
         />
         <div>
           <h5>Avaliação</h5>
-          {[...Array(5)].map((_, index) => {
+          {[...Array(5)].map((star, index) => {
             const ratingStars = index + 1;
             return (
-              <label htmlFor={index} key={index}>
+              <label htmlFor={index} key={star}>
                 <input
                   className="star" type="radio" id={index}
                   onClick={() => this.starRating(ratingStars)}

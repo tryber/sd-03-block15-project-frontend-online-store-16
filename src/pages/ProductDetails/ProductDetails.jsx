@@ -1,7 +1,7 @@
 import React from 'react';
 import SearchBar from '../../components/SearchBar/SearchBar';
 import AddRemoveProductButton from '../../components/AddRemoveButton/AddRemoveButton';
-import ProductRating from '../../components/ProductRating/ProductRating'
+import ProductRating from '../../components/ProductRating/ProductRating';
 import './productDetails.css';
 
 class ProductDetails extends React.Component {
