@@ -16,7 +16,6 @@ class ProductRating extends React.Component {
   changeComent(event) {
     this.setState({ comment: event.target.value });
   }
-  
   starRating(rating) {
     this.setState({ rating });
   }
