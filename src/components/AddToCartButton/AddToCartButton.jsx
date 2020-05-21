@@ -14,25 +14,25 @@ class AddToCartButton extends React.Component {
 
     switch (true) {
       case (!!existingItem):
-        cartItems[indexOfExistingItem].amount += 1;
+        cartItems[indexOfExistingItem].quantity += 1;
         localStorage.setItem('cartItems', JSON.stringify(cartItems));
         return amountUpdate && amountUpdate();
       case (existingItem === undefined):
-        product.amount = 1;
+        product.quantity = 1;
         localStorage.setItem('cartItems', JSON.stringify([...cartItems, { ...product }]));
         return amountUpdate && amountUpdate();
       default:
-        product.amount = 1;
+        product.quantity = 1;
         localStorage.setItem('cartItems', JSON.stringify(cartItems));
         return amountUpdate && amountUpdate();
     }
   }
 
   render() {
-    const { test } = this.props;
+    const { test, children } = this.props;
     return (
       <button type="button" data-testid={test} onClick={this.addToCart}>
-        Adicionar ao carrinho
+        {children}
       </button>
     );
   }

@@ -11,20 +11,20 @@ class RemoveFromCartButton extends React.Component {
     const cartItems = JSON.parse(localStorage.getItem('cartItems'));
     const item = cartItems.find((item) => item.id === product.id);
     const itemIndex = cartItems.indexOf(item);
-    if (item.amount === 1) {
+    if (item.quantity === 1) {
         cartItems.splice(itemIndex, 1);
     } else {
-        if (itemIndex !== -1) cartItems[itemIndex].amount -= 1;
+        if (itemIndex !== -1) cartItems[itemIndex].quantity -= 1;
     }
     localStorage.setItem('cartItems', JSON.stringify(cartItems));
     return amountUpdate && amountUpdate();
   }
 
   render() {
-    const { test } = this.props;
+    const { test, children } = this.props;
     return (
       <button type="button" data-testid={test} onClick={this.addToCart}>
-        Remover do carrinho
+        {children}
       </button>
     );
   }

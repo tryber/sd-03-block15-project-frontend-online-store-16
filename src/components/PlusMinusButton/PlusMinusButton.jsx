@@ -1,35 +1,50 @@
 import React from 'react';
+import AddToCartButton from '../AddToCartButton/AddToCartButton';
+import RemoveFromCartButton from '../RemoveFromCartButton/RemoveFromCartButton';
 
-class AddRemoveButton extends React.Component {
+class PlusMinusButton extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { amount: 1 };
-    this.addToCartButton = this.addToCartButton.bind(this);
-    this.removeFromCartButton = this.removeFromCartButton.bind(this);
+    const cartItems = JSON.parse(localStorage.getItem('cartItems'));
+    const quantity = cartItems && cartItems.some((item) => item.id === props.product.id)
+      ? cartItems.find((item) => item.id === props.product.id).quantity : 0;
+    this.state = { quantity };
+    this.amountUpdate = this.amountUpdate.bind(this);
   }
 
-  addToCartButton() {
-    this.setState((state) => ({ amount: state.amount + 1 }));
-  }
-
-  removeFromCartButton() {
-    const { amount } = this.state;
-    if (amount >= 1) {
-      this.setState((state) => ({ amount: state.amount - 1 }));
-    } else {
-      this.setState({ amount: 0 });
+  amountUpdate() {
+    const cartItems = JSON.parse(localStorage.getItem('cartItems'));
+    const { product } = this.props;
+    if (cartItems.some((item) => item.id === product.id)) {
+      const { quantity } = cartItems.find((item) => item.id === product.id);
+      return this.setState({ quantity });
     }
+    return this.setState({ quantity: 0 });
   }
 
   render() {
+    const { product, testAmount, testAdd, testRemove } = this.props;
+    const { quantity } = this.state;
     return (
-      <div data-testid="product-detail-add-to-cart">
-        <button onClick={this.addToCartButton}>+</button>
-        <span>{this.state.amount}</span>
-        <button onClick={this.removeFromCartButton}>-</button>
+      <div className="product-button">
+        <AddToCartButton
+          product={product}
+          testid={testAdd}
+          amountUpdate={this.amountUpdate}
+        >
+          +
+        </AddToCartButton>
+        <label htmlFor="quantidade" data-testid={testAmount}>{quantity}</label>
+        <RemoveFromCartButton
+          product={product}
+          amountUpdate={this.amountUpdate}
+          test={testRemove}
+        >
+          -
+        </RemoveFromCartButton>
       </div>
     );
   }
 }
 
-export default AddRemoveButton;
+export default PlusMinusButton;

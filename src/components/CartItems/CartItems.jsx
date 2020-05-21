@@ -1,12 +1,17 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
+import CartProduct from '../CartProduct/CartProduct'
 
-class CardItems extends React.Component {
-  constructor(props) {
-    super(props);
-    this.addToCart = this.addToCart.bind(this);
-    this.removeFromCart = this.removeFromCart.bind(this);
+class CartItems extends React.Component {
+  render() {
+    const cartItems = JSON.parse(localStorage.getItem('cartItems'));
+    return (
+      <div>
+        {cartItems.map((item) => (
+          <CartProduct key={item.id} product={item} />
+        ))}
+      </div>
+    );
   }
 }
 
-export default CardItems;
+export default CartItems;

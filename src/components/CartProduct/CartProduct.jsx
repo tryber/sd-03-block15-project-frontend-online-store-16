@@ -1,6 +1,5 @@
 import React from 'react';
-
-import PlusMinusButton from './PlusMinusButton';
+import PlusMinusButton from '../PlusMinusButton/PlusMinusButton';
 
 class CartProduct extends React.Component {
   render() {

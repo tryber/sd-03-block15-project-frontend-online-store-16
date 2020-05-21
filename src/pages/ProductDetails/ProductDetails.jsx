@@ -8,6 +8,7 @@ import './productDetails.css';
 class ProductDetails extends React.Component {
   render() {
     const { location: { state } } = this.props;
+    const { product } = this.props;
 
     if (!state) return <p>Loading...</p>;
 
@@ -31,8 +32,15 @@ class ProductDetails extends React.Component {
             {state.condition}
           </p>
         </div>
-        <PlusMinusButton className="productDetails" />
-        <AddToCartButton />
+        <PlusMinusButton
+          product={product}
+          testAdd="product-detail-add-to-cart"
+          testSubtract="product-decrease-quantity"
+          testAmount="shopping-cart-product-quantity"
+        />
+        <AddToCartButton>
+          Adicionar ao carrinho
+        </AddToCartButton>
         <ProductRating />
       </div>
     );
