@@ -1,6 +1,7 @@
 import React from 'react';
 import SearchBar from '../../components/SearchBar/SearchBar';
-import AddRemoveProductButton from '../../components/AddRemoveButton/AddRemoveButton';
+import PlusMinusButton from '../../components/PlusMinusButton/PlusMinusButton';
+import AddToCartButton from '../../components/AddToCartButton/AddToCartButton';
 import ProductRating from '../../components/ProductRating/ProductRating';
 import './productDetails.css';
 
@@ -30,7 +31,8 @@ class ProductDetails extends React.Component {
             {state.condition}
           </p>
         </div>
-        <AddRemoveProductButton className="productDetails" />
+        <PlusMinusButton className="productDetails" />
+        <AddToCartButton />
         <ProductRating />
       </div>
     );

@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class AddToCartButton extends Component {
+class AddToCartButton extends React.Component {
   constructor(props) {
     super(props);
     this.addToCart = this.addToCart.bind(this);
@@ -29,10 +29,10 @@ class AddToCartButton extends Component {
   }
 
   render() {
-    const { children, test } = this.props;
+    const { test } = this.props;
     return (
       <button type="button" data-testid={test} onClick={this.addToCart}>
-        { children }
+        Adicionar ao carrinho
       </button>
     );
   }
