@@ -18,19 +18,11 @@ class ProductDetails extends React.Component {
         <h1 className="productTitle">Detalhes do Produto</h1>
         <div className="productDetails">
           <h3 data-testid="product-detail-name">
-            {state.title}
-            <br />
-            {`R$ ${state.price}`}
+            {state.title} <br /> {`R$ ${state.price}`}
           </h3>
-        </div>
-        <div className="productDetails">
           <img src={state.thumbnail} alt={state.title} />
-        </div>
-        <div className="productDetails">
           <h5 className="productDetails">Especificações técnicas:</h5>
-          <p>
-            {state.condition}
-          </p>
+          <p>{state.condition}</p>
         </div>
         <PlusMinusButton
           product={product}
