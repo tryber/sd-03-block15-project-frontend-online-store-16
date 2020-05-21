@@ -2,6 +2,7 @@ import React from 'react';
 import SearchBar from '../../components/SearchBar/SearchBar';
 import AddRemoveProductButton from '../../components/AddRemoveButton/AddRemoveButton';
 import ProductRating from '../../components/ProductRating/ProductRating';
+import AddButton from '../../components/AddButton/AddButton';
 import './productDetails.css';
 
 class ProductDetails extends React.Component {
@@ -23,6 +24,9 @@ class ProductDetails extends React.Component {
         </div>
         <div className="productDetails">
           <img src={state.thumbnail} alt={state.title} />
+        </div>
+        <div>
+          <AddButton />
         </div>
         <div className="productDetails">
           <h5 className="productDetails">Especificações técnicas:</h5>
