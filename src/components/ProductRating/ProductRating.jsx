@@ -13,9 +13,11 @@ class ProductRating extends React.Component {
     this.starRating = this.starRating.bind(this);
     this.submitButton = this.submitButton.bind(this);
   }
+
   changeComent(event) {
     this.setState({ comment: event.target.value });
   }
+
   starRating(rating) {
     this.setState({ rating });
   }
@@ -41,7 +43,9 @@ class ProductRating extends React.Component {
             return (
               <label htmlFor={index} key={star}>
                 <input
-                  className="star" type="radio" id={index}
+                  className="star"
+                  type="radio"
+                  id={index}
                   onClick={() => this.starRating(ratingStars)}
                 />
                 <FaStar color={ratingStars <= rating ? '#ffc107' : '#e4e5e9'} size={25} />

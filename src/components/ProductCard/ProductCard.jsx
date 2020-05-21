@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import AddButton from '../AddButton/AddButton';
 import './productCard.css';
 
 class ProductCard extends React.Component {
@@ -24,6 +25,7 @@ class ProductCard extends React.Component {
         >
           Mais detalhes
         </Link>
+        <AddButton />
       </div>
     );
   }
