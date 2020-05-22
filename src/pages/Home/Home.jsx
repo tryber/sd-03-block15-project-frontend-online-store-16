@@ -66,7 +66,7 @@ class Home extends React.Component {
             className="left"
           />
           <div>
-            {categories.length === 0 ? (
+            {results === null ? (
               <p data-testid="home-initial-message">
                 Digite algum termo de pesquisa ou escolha uma categoria.
               </p>
