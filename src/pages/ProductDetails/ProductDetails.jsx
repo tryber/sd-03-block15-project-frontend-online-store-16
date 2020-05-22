@@ -1,6 +1,5 @@
 import React from 'react';
 import SearchBar from '../../components/SearchBar/SearchBar';
-// import PlusMinusButton from '../../components/PlusMinusButton/PlusMinusButton';
 import AddToCartButton from '../../components/AddToCartButton/AddToCartButton';
 import ProductRating from '../../components/ProductRating/ProductRating';
 import './productDetails.css';
@@ -8,7 +7,9 @@ import './productDetails.css';
 class ProductDetails extends React.Component {
   render() {
     const { location: { state } } = this.props;
-    // const { product, forceUpdate } = this.props;
+    const { product } = this.props;
+    console.log(product);
+    
 
     if (!state) return <p>Loading...</p>;
 
@@ -24,14 +25,7 @@ class ProductDetails extends React.Component {
           <h5 className="productDetails">Especificações técnicas:</h5>
           <p>{state.condition}</p>
         </div>
-        {/* <PlusMinusButton
-          product={product}
-          testAdd="product-detail-add-to-cart"
-          testSubtract="product-decrease-quantity"
-          testAmount="shopping-cart-product-quantity"
-          forceUpdate={forceUpdate}
-        /> */}
-        <AddToCartButton>
+        <AddToCartButton product={product} data-testid="product-detail-add-to-cart">
           Adicionar ao carrinho
         </AddToCartButton>
         <ProductRating />
