@@ -31,7 +31,7 @@ class PlusMinusButton extends React.Component {
       <div className="product-button">
         <AddToCartButton
           product={product}
-          testid={testAdd}
+          test={testAdd}
           amountUpdate={this.amountUpdate}
         >
           +

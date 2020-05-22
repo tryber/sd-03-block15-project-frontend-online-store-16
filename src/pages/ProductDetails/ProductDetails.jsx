@@ -24,7 +24,7 @@ class ProductDetails extends React.Component {
           <h5 className="productDetails">Especificações técnicas:</h5>
           <p>{state.condition}</p>
         </div>
-        <AddToCartButton product={state} data-testid="product-detail-add-to-cart">
+        <AddToCartButton product={state} test="product-detail-add-to-cart">
           Adicionar ao carrinho
         </AddToCartButton>
         <ProductRating />
