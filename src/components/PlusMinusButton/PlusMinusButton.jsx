@@ -5,7 +5,7 @@ import RemoveFromCartButton from '../RemoveFromCartButton/RemoveFromCartButton';
 class PlusMinusButton extends React.Component {
   constructor(props) {
     super(props);
-    const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];;
+    const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
     const quantity = cartItems && cartItems.some((item) => item.id === props.product.id)
       ? cartItems.find((item) => item.id === props.product.id).quantity : 0;
     this.state = { quantity };
