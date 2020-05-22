@@ -11,21 +11,21 @@ class AddToCartButton extends React.Component {
     let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
     const existingItem = cartItems && cartItems.find((element) => element.id === product.id);
     const indexOfExistingItem = cartItems && cartItems.indexOf(existingItem);
-
     switch (true) {
       case (!!existingItem):
         cartItems[indexOfExistingItem].quantity += 1;
         localStorage.setItem('cartItems', JSON.stringify(cartItems));
-        return amountUpdate && amountUpdate();
+        break;
       case (existingItem === undefined):
         product.quantity = 1;
         localStorage.setItem('cartItems', JSON.stringify([...cartItems, { ...product }]));
-        return amountUpdate && amountUpdate();
+        break;
       default:
         product.quantity = 1;
         localStorage.setItem('cartItems', JSON.stringify(cartItems));
-        return amountUpdate && amountUpdate();
+        break;
     }
+    return amountUpdate && amountUpdate();
   }
 
   render() {

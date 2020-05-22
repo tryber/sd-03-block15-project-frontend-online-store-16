@@ -16,7 +16,7 @@ class CartPage extends React.Component {
         </div>
         {cartItems === null
         ? <EmptyCart />
-        : <CartItems />
+        : <CartItems cartItems={cartItems || []} forceUpdate={() => this.forceUpdate()} />
         }
       </div>
     );
