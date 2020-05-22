@@ -25,7 +25,7 @@ class PlusMinusButton extends React.Component {
   }
 
   render() {
-    const { product, testAmount, testAdd, testRemove } = this.props;
+    const { product, test, testAmount, testAdd, testRemove } = this.props;
     const { quantity } = this.state;
     return (
       <div className="product-button">
@@ -36,7 +36,7 @@ class PlusMinusButton extends React.Component {
         >
           +
         </AddToCartButton>
-        <label htmlFor="quantidade" data-testid={testAmount}>{quantity}</label>
+        <label htmlFor="quantidade" test={testAmount}>{quantity}</label>
         <RemoveFromCartButton
           product={product}
           amountUpdate={this.amountUpdate}
