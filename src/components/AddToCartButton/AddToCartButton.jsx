@@ -8,7 +8,7 @@ class AddToCartButton extends React.Component {
 
   addToCart() {
     const { product, amountUpdate } = this.props;
-    const cartItems = JSON.parse(localStorage.getItem('cartItems'));
+    let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
     const existingItem = cartItems && cartItems.find((element) => element.id === product.id);
     const indexOfExistingItem = cartItems && cartItems.indexOf(existingItem);
 
