@@ -13,7 +13,7 @@ class CartProduct extends React.Component {
         <div>
           <PlusMinusButton
             product={product}
-            testAmoun="shopping-cart-product-quantity"
+            testAmount="shopping-cart-product-quantity"
             testAdd="product-increase-quantity"
             testSubtract="product-decrease-quantity"
             forceUpdate={forceUpdate}
