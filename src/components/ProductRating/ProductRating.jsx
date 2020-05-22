@@ -41,7 +41,7 @@ class ProductRating extends React.Component {
             return (
               <label htmlFor={index} key={index}>
                 <input
-                  className="star" type="radio" id={index}
+                  className="star" type="radio" id={star}
                   onClick={() => this.starRating(ratingStars)}
                 />
                 <FaStar color={ratingStars <= rating ? '#ffc107' : '#e4e5e9'} size={25} />
