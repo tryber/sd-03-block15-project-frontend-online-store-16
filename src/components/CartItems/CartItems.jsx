@@ -1,12 +1,10 @@
 import React from 'react';
-import CartProduct from '../CartProduct/CartProduct'
+import CartProduct from '../CartProduct/CartProduct';
 
 class CartItems extends React.Component {
   render() {
-    const { cartItems } = this.props
-    console.log(cartItems);
-    
-    const sum = cartItems.reduce((a, b) => a + (parseFloat(b.price) * parseInt(b.quantity)), 0)
+    const { cartItems } = this.props;
+    const sum = cartItems.reduce((a, b) => a + (parseFloat(b.price) * (b.quantity)), 0);
     return (
       <div>
         {cartItems.map((item) => (

@@ -2,10 +2,6 @@ import React from 'react';
 import PlusMinusButton from '../PlusMinusButton/PlusMinusButton';
 
 class CartProduct extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { teste: 0 }
-  }
   render() {
     const { product, forceUpdate } = this.props;
     const { title, thumbnail, price, quantity } = product;

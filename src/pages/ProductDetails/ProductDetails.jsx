@@ -9,7 +9,6 @@ class ProductDetails extends React.Component {
     const { location: { state } } = this.props;
     const { product } = this.props;
     console.log(product);
-    
 
     if (!state) return <p>Loading...</p>;
 
