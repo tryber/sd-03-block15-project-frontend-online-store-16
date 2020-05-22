@@ -1,6 +1,5 @@
 import React from 'react';
 import SearchBar from '../../components/SearchBar/SearchBar';
-import PlusMinusButton from '../../components/PlusMinusButton/PlusMinusButton';
 import AddToCartButton from '../../components/AddToCartButton/AddToCartButton';
 import ProductRating from '../../components/ProductRating/ProductRating';
 import './productDetails.css';
