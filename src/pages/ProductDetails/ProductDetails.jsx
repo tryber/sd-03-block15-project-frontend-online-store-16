@@ -26,11 +26,11 @@ class ProductDetails extends React.Component {
           <p>{state.condition}</p>
         </div>
         <PlusMinusButton
-            product={product}
-            testAmount="shopping-cart-product-quantity"
-            testAdd="product-increase-quantity"
-            testSubtract="product-decrease-quantity"
-            // forceUpdate={forceUpdate}
+          product={state}
+          testAmount="shopping-cart-product-quantity"
+          testAdd="product-increase-quantity"
+          testSubtract="product-decrease-quantity"
+          // forceUpdate={forceUpdate}
         />
         <AddToCartButton product={state} test="product-detail-add-to-cart">
           Adicionar ao carrinho
