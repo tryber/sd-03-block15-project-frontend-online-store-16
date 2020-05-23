@@ -1,12 +1,19 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
+import CartProduct from '../CartProduct/CartProduct';
 
-class CardItems extends React.Component {
-  constructor(props) {
-    super(props);
-    this.addToCart = this.addToCart.bind(this);
-    this.removeFromCart = this.removeFromCart.bind(this);
+class CartItems extends React.Component {
+  render() {
+    const { cartItems } = this.props;
+    const sum = cartItems.reduce((a, b) => a + (parseFloat(b.price) * (b.quantity)), 0);
+    return (
+      <div>
+        {cartItems.map((item) => (
+          <CartProduct key={item.id} product={item} forceUpdate={this.props.forceUpdate} />
+        ))}
+        TOTAL: R$ { sum.toFixed(2) }
+      </div>
+    );
   }
 }
 
-export default CardItems;
+export default CartItems;

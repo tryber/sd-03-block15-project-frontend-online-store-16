@@ -2,6 +2,7 @@ import React from 'react';
 import SearchBar from '../../components/SearchBar/SearchBar';
 import BackButton from '../../components/BackButton/BackButton';
 import EmptyCart from '../../components/EmptyCart/EmptyCart';
+import CartItems from '../../components/CartItems/CartItems';
 import './cartPage.css';
 
 class CartPage extends React.Component {
@@ -15,7 +16,7 @@ class CartPage extends React.Component {
         </div>
         {cartItems === null
         ? <EmptyCart />
-        : <p>Teste</p>
+        : <CartItems cartItems={cartItems || []} forceUpdate={() => this.forceUpdate()} />
         }
       </div>
     );
